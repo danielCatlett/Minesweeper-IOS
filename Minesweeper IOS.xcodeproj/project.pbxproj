@@ -16,6 +16,8 @@
 		3F483F431EBD6AC100B132F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F483F421EBD6AC100B132F7 /* ViewController.swift */; };
 		3F483F451EBD7F0D00B132F7 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F483F441EBD7F0D00B132F7 /* CollectionViewCell.swift */; };
 		3F483F471EBEA8F500B132F7 /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F483F461EBEA8F500B132F7 /* GridLayout.swift */; };
+		3FC5EC091EBECCF500C808B9 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC5EC081EBECCF500C808B9 /* Tile.swift */; };
+		3FC5EC0B1EBECDA000C808B9 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC5EC0A1EBECDA000C808B9 /* Board.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		3F483F421EBD6AC100B132F7 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3F483F441EBD7F0D00B132F7 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		3F483F461EBEA8F500B132F7 /* GridLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
+		3FC5EC081EBECCF500C808B9 /* Tile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
+		3FC5EC0A1EBECDA000C808B9 /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +105,12 @@
 		3F483F131EBD66C300B132F7 /* Minesweeper IOS */ = {
 			isa = PBXGroup;
 			children = (
-				3F483F181EBD66C300B132F7 /* Main.storyboard */,
-				3F483F421EBD6AC100B132F7 /* ViewController.swift */,
 				3F483F441EBD7F0D00B132F7 /* CollectionViewCell.swift */,
 				3F483F461EBEA8F500B132F7 /* GridLayout.swift */,
+				3F483F181EBD66C300B132F7 /* Main.storyboard */,
+				3FC5EC081EBECCF500C808B9 /* Tile.swift */,
+				3FC5EC0A1EBECDA000C808B9 /* Board.swift */,
+				3F483F421EBD6AC100B132F7 /* ViewController.swift */,
 				3F483F1B1EBD66C300B132F7 /* Assets.xcassets */,
 				3F483F141EBD66C300B132F7 /* AppDelegate.swift */,
 				3F483F1D1EBD66C300B132F7 /* LaunchScreen.storyboard */,
@@ -267,6 +273,8 @@
 			files = (
 				3F483F431EBD6AC100B132F7 /* ViewController.swift in Sources */,
 				3F483F151EBD66C300B132F7 /* AppDelegate.swift in Sources */,
+				3FC5EC0B1EBECDA000C808B9 /* Board.swift in Sources */,
+				3FC5EC091EBECCF500C808B9 /* Tile.swift in Sources */,
 				3F483F451EBD7F0D00B132F7 /* CollectionViewCell.swift in Sources */,
 				3F483F471EBEA8F500B132F7 /* GridLayout.swift in Sources */,
 			);

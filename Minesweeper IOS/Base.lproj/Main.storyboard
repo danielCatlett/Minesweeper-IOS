@@ -14,7 +14,6 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Minesweeper_IOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
@@ -78,10 +77,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5V-0i-s9t">
                                 <rect key="frame" x="162" y="597" width="50" height="50"/>
                                 <state key="normal" image="questionbutton"/>
+                                <connections>
+                                    <action selector="questionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eho-ol-Fy2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OI9-Dp-IwT">
                                 <rect key="frame" x="16" y="597" width="50" height="50"/>
                                 <state key="normal" image="minebuttonselected"/>
+                                <connections>
+                                    <action selector="mineButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gqy-jQ-oA5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3NQ-8B-prP">
                                 <rect key="frame" x="309" y="597" width="50" height="50"/>
@@ -90,6 +95,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFR-9x-tIO">
                                 <rect key="frame" x="89" y="597" width="50" height="50"/>
                                 <state key="normal" image="flagbutton"/>
+                                <connections>
+                                    <action selector="flagButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hPb-LT-w0C"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ZY-sB-u6v">
                                 <rect key="frame" x="235" y="597" width="50" height="50"/>
@@ -159,6 +167,7 @@
                         <outlet property="questionButton" destination="M5V-0i-s9t" id="P9V-tJ-Ssc"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="24.800000000000001" y="36.431784107946029"/>
         </scene>
