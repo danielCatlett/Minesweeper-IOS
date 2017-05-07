@@ -1,14 +1,21 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Minesweeper_IOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +23,151 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8s4-OF-w65">
+                                <rect key="frame" x="164" y="617" width="46" height="30"/>
+                            </stackView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7xj-9q-zax">
+                                <rect key="frame" x="74" y="568" width="80" height="30"/>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="llJ-jP-E5t">
+                                <rect key="frame" x="220" y="564" width="81" height="38"/>
+                            </containerView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ydT-S3-zf2">
+                                <rect key="frame" x="16" y="162" width="343" height="343"/>
+                                <color key="backgroundColor" red="0.76078431369999999" green="0.76078431369999999" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ydT-S3-zf2" secondAttribute="height" multiplier="1:1" id="plW-aE-eVH"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="LdH-Id-taf">
+                                    <size key="itemSize" width="43" height="43"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="tileCell" id="Lxa-78-0ZX" customClass="CollectionViewCell" customModule="Minesweeper_IOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="43" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="43" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PRz-Ye-7Jj">
+                                                    <rect key="frame" x="0.0" y="0.0" width="43" height="43"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="PRz-Ye-7Jj" secondAttribute="trailing" id="2im-Po-H4n"/>
+                                            <constraint firstItem="PRz-Ye-7Jj" firstAttribute="leading" secondItem="Lxa-78-0ZX" secondAttribute="leading" id="NBw-eh-4QJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="PRz-Ye-7Jj" secondAttribute="bottom" id="PGL-21-K51"/>
+                                            <constraint firstItem="PRz-Ye-7Jj" firstAttribute="top" secondItem="Lxa-78-0ZX" secondAttribute="top" id="sKG-jX-YmD"/>
+                                        </constraints>
+                                        <size key="customSize" width="43" height="43"/>
+                                        <connections>
+                                            <outlet property="imageView" destination="PRz-Ye-7Jj" id="dxE-d7-znr"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Kif-ve-HEK"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="zjJ-rD-U9z"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5V-0i-s9t">
+                                <rect key="frame" x="162" y="597" width="50" height="50"/>
+                                <state key="normal" image="questionbutton"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OI9-Dp-IwT">
+                                <rect key="frame" x="16" y="597" width="50" height="50"/>
+                                <state key="normal" image="minebuttonselected"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3NQ-8B-prP">
+                                <rect key="frame" x="309" y="597" width="50" height="50"/>
+                                <state key="normal" image="zoomoutbutton"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFR-9x-tIO">
+                                <rect key="frame" x="89" y="597" width="50" height="50"/>
+                                <state key="normal" image="flagbutton"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ZY-sB-u6v">
+                                <rect key="frame" x="235" y="597" width="50" height="50"/>
+                                <state key="normal" image="zoominbutton"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minesweeper iOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="556-Fp-xXM">
+                                <rect key="frame" x="16" y="34" width="233" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mines Left: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6RA-pQ-MXL">
+                                <rect key="frame" x="245" y="78" width="114" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vnv-hv-Xo1">
+                                <rect key="frame" x="16" y="78" width="75" height="30"/>
+                                <state key="normal" title="New Game"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.76078431372549016" green="0.76078431372549016" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ydT-S3-zf2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1EY-bb-TR7"/>
+                            <constraint firstItem="3NQ-8B-prP" firstAttribute="leading" secondItem="llJ-jP-E5t" secondAttribute="trailing" constant="8" id="1ub-EQ-F0e"/>
+                            <constraint firstItem="8s4-OF-w65" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3jM-M8-XFC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3ZY-sB-u6v" secondAttribute="bottom" constant="20" id="7ue-CT-hCy"/>
+                            <constraint firstItem="8s4-OF-w65" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="617" id="8BQ-5B-8XF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="llJ-jP-E5t" secondAttribute="bottom" constant="65" id="8nk-9s-zlI"/>
+                            <constraint firstItem="3ZY-sB-u6v" firstAttribute="centerX" secondItem="llJ-jP-E5t" secondAttribute="centerX" id="9RC-Jw-I1a"/>
+                            <constraint firstItem="556-Fp-xXM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="14" id="Bdb-cr-sBr"/>
+                            <constraint firstItem="OI9-Dp-IwT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Fjc-q4-6Fn"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7xj-9q-zax" secondAttribute="bottom" constant="69" id="KO1-bX-hti"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8s4-OF-w65" secondAttribute="bottom" constant="20" id="LGe-vQ-UoB"/>
+                            <constraint firstItem="ydT-S3-zf2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Ndb-Oj-O0M"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="M5V-0i-s9t" secondAttribute="bottom" constant="20" id="O1o-m6-kVc"/>
+                            <constraint firstItem="Vnv-hv-Xo1" firstAttribute="top" secondItem="556-Fp-xXM" secondAttribute="bottom" constant="8" id="OKr-pj-exG"/>
+                            <constraint firstItem="7xj-9q-zax" firstAttribute="leading" secondItem="OI9-Dp-IwT" secondAttribute="trailing" constant="8" id="Y9g-UY-Kc9"/>
+                            <constraint firstItem="llJ-jP-E5t" firstAttribute="centerY" secondItem="7xj-9q-zax" secondAttribute="centerY" id="a0A-tj-OPm"/>
+                            <constraint firstItem="M5V-0i-s9t" firstAttribute="top" secondItem="7xj-9q-zax" secondAttribute="bottom" constant="-1" id="cZv-N4-Izh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OI9-Dp-IwT" secondAttribute="bottom" constant="20" id="ddh-8Q-1O9"/>
+                            <constraint firstItem="6RA-pQ-MXL" firstAttribute="top" secondItem="556-Fp-xXM" secondAttribute="bottom" constant="8" id="eyj-la-f4o"/>
+                            <constraint firstItem="ydT-S3-zf2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fDD-hv-IA4"/>
+                            <constraint firstItem="uFR-9x-tIO" firstAttribute="centerX" secondItem="7xj-9q-zax" secondAttribute="centerX" id="fla-YA-WxC"/>
+                            <constraint firstItem="ydT-S3-zf2" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="fsi-qM-BzL"/>
+                            <constraint firstItem="556-Fp-xXM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="l04-Ya-w4q"/>
+                            <constraint firstItem="M5V-0i-s9t" firstAttribute="leading" secondItem="7xj-9q-zax" secondAttribute="trailing" constant="8" id="l9B-7a-5G9"/>
+                            <constraint firstItem="llJ-jP-E5t" firstAttribute="leading" secondItem="M5V-0i-s9t" secondAttribute="trailing" constant="8" id="lEg-Kt-I6i"/>
+                            <constraint firstItem="6RA-pQ-MXL" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="lor-fa-ghy"/>
+                            <constraint firstItem="M5V-0i-s9t" firstAttribute="top" secondItem="llJ-jP-E5t" secondAttribute="bottom" constant="-5" id="p7B-X8-yBi"/>
+                            <constraint firstItem="3NQ-8B-prP" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="pFr-74-h0v"/>
+                            <constraint firstItem="Vnv-hv-Xo1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="q8z-tx-zpS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uFR-9x-tIO" secondAttribute="bottom" constant="20" id="qHp-1m-vq6"/>
+                            <constraint firstItem="8s4-OF-w65" firstAttribute="leading" secondItem="uFR-9x-tIO" secondAttribute="trailing" constant="25" id="r51-Fd-aY4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3NQ-8B-prP" secondAttribute="bottom" constant="20" id="siy-fR-NAO"/>
+                            <constraint firstItem="M5V-0i-s9t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="u5D-qy-jy0"/>
+                            <constraint firstItem="llJ-jP-E5t" firstAttribute="top" secondItem="ydT-S3-zf2" secondAttribute="bottom" constant="59" id="usQ-Oz-OEI"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="ydT-S3-zf2" id="5vC-zT-CR1"/>
+                        <outlet property="flagButton" destination="uFR-9x-tIO" id="Uul-Yf-aFp"/>
+                        <outlet property="mineButton" destination="OI9-Dp-IwT" id="8va-gR-XUO"/>
+                        <outlet property="mineCounter" destination="6RA-pQ-MXL" id="gLb-xx-r6g"/>
+                        <outlet property="newGameButton" destination="Vnv-hv-Xo1" id="1rp-0I-4NW"/>
+                        <outlet property="questionButton" destination="M5V-0i-s9t" id="P9V-tJ-Ssc"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="36.431784107946029"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="flagbutton" width="50" height="50"/>
+        <image name="minebuttonselected" width="50" height="50"/>
+        <image name="questionbutton" width="50" height="50"/>
+        <image name="zoominbutton" width="50" height="50"/>
+        <image name="zoomoutbutton" width="50" height="50"/>
+    </resources>
 </document>

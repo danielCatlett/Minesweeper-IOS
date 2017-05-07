@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		3F483F151EBD66C300B132F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F483F141EBD66C300B132F7 /* AppDelegate.swift */; };
-		3F483F171EBD66C300B132F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F483F161EBD66C300B132F7 /* ViewController.swift */; };
 		3F483F1A1EBD66C300B132F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F483F181EBD66C300B132F7 /* Main.storyboard */; };
 		3F483F1C1EBD66C300B132F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F483F1B1EBD66C300B132F7 /* Assets.xcassets */; };
 		3F483F1F1EBD66C300B132F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F483F1D1EBD66C300B132F7 /* LaunchScreen.storyboard */; };
 		3F483F2A1EBD66C300B132F7 /* Minesweeper_IOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F483F291EBD66C300B132F7 /* Minesweeper_IOSTests.swift */; };
 		3F483F351EBD66C300B132F7 /* Minesweeper_IOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F483F341EBD66C300B132F7 /* Minesweeper_IOSUITests.swift */; };
+		3F483F431EBD6AC100B132F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F483F421EBD6AC100B132F7 /* ViewController.swift */; };
+		3F483F451EBD7F0D00B132F7 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F483F441EBD7F0D00B132F7 /* CollectionViewCell.swift */; };
+		3F483F471EBEA8F500B132F7 /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F483F461EBEA8F500B132F7 /* GridLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,6 @@
 /* Begin PBXFileReference section */
 		3F483F111EBD66C300B132F7 /* Minesweeper IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Minesweeper IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F483F141EBD66C300B132F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3F483F161EBD66C300B132F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3F483F191EBD66C300B132F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F483F1B1EBD66C300B132F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F483F1E1EBD66C300B132F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,9 @@
 		3F483F301EBD66C300B132F7 /* Minesweeper IOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Minesweeper IOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F483F341EBD66C300B132F7 /* Minesweeper_IOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Minesweeper_IOSUITests.swift; sourceTree = "<group>"; };
 		3F483F361EBD66C300B132F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F483F421EBD6AC100B132F7 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3F483F441EBD7F0D00B132F7 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		3F483F461EBEA8F500B132F7 /* GridLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,10 +101,12 @@
 		3F483F131EBD66C300B132F7 /* Minesweeper IOS */ = {
 			isa = PBXGroup;
 			children = (
-				3F483F141EBD66C300B132F7 /* AppDelegate.swift */,
-				3F483F161EBD66C300B132F7 /* ViewController.swift */,
 				3F483F181EBD66C300B132F7 /* Main.storyboard */,
+				3F483F421EBD6AC100B132F7 /* ViewController.swift */,
+				3F483F441EBD7F0D00B132F7 /* CollectionViewCell.swift */,
+				3F483F461EBEA8F500B132F7 /* GridLayout.swift */,
 				3F483F1B1EBD66C300B132F7 /* Assets.xcassets */,
+				3F483F141EBD66C300B132F7 /* AppDelegate.swift */,
 				3F483F1D1EBD66C300B132F7 /* LaunchScreen.storyboard */,
 				3F483F201EBD66C300B132F7 /* Info.plist */,
 			);
@@ -259,8 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F483F171EBD66C300B132F7 /* ViewController.swift in Sources */,
+				3F483F431EBD6AC100B132F7 /* ViewController.swift in Sources */,
 				3F483F151EBD66C300B132F7 /* AppDelegate.swift in Sources */,
+				3F483F451EBD7F0D00B132F7 /* CollectionViewCell.swift in Sources */,
+				3F483F471EBEA8F500B132F7 /* GridLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +515,7 @@
 				3F483F3B1EBD66C300B132F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F483F3C1EBD66C400B132F7 /* Build configuration list for PBXNativeTarget "Minesweeper IOSTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +524,7 @@
 				3F483F3E1EBD66C400B132F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F483F3F1EBD66C400B132F7 /* Build configuration list for PBXNativeTarget "Minesweeper IOSUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +533,7 @@
 				3F483F411EBD66C400B132F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
