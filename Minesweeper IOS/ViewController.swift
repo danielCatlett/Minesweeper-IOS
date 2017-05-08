@@ -140,7 +140,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         //coordinates of the tile that was tapped
         let x = coordinate.0
         let y = coordinate.1
-        mineCounter.text = String(x) + " " + String(y)
         
         //if board is not yet set up, set it up
         if(!boardSetUp)
