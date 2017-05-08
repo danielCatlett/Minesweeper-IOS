@@ -32,6 +32,54 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="llJ-jP-E5t">
                                 <rect key="frame" x="220" y="564" width="81" height="38"/>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5V-0i-s9t">
+                                <rect key="frame" x="162" y="597" width="50" height="50"/>
+                                <state key="normal" image="questionbutton"/>
+                                <connections>
+                                    <action selector="questionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eho-ol-Fy2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OI9-Dp-IwT">
+                                <rect key="frame" x="16" y="597" width="50" height="50"/>
+                                <state key="normal" image="minebuttonselected"/>
+                                <connections>
+                                    <action selector="mineButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gqy-jQ-oA5"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3NQ-8B-prP">
+                                <rect key="frame" x="309" y="597" width="50" height="50"/>
+                                <state key="normal" image="zoomoutbutton"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFR-9x-tIO">
+                                <rect key="frame" x="89" y="597" width="50" height="50"/>
+                                <state key="normal" image="flagbutton"/>
+                                <connections>
+                                    <action selector="flagButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hPb-LT-w0C"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ZY-sB-u6v">
+                                <rect key="frame" x="235" y="597" width="50" height="50"/>
+                                <state key="normal" image="zoominbutton"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minesweeper iOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="556-Fp-xXM">
+                                <rect key="frame" x="16" y="34" width="233" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mines Left: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6RA-pQ-MXL">
+                                <rect key="frame" x="245" y="78" width="114" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vnv-hv-Xo1">
+                                <rect key="frame" x="16" y="78" width="75" height="30"/>
+                                <state key="normal" title="New Game"/>
+                                <connections>
+                                    <action selector="newGameButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tka-yQ-eph"/>
+                                </connections>
+                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ydT-S3-zf2">
                                 <rect key="frame" x="16" y="162" width="343" height="343"/>
                                 <color key="backgroundColor" red="0.76078431369999999" green="0.76078431369999999" blue="0.76078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -74,51 +122,6 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="zjJ-rD-U9z"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5V-0i-s9t">
-                                <rect key="frame" x="162" y="597" width="50" height="50"/>
-                                <state key="normal" image="questionbutton"/>
-                                <connections>
-                                    <action selector="questionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eho-ol-Fy2"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OI9-Dp-IwT">
-                                <rect key="frame" x="16" y="597" width="50" height="50"/>
-                                <state key="normal" image="minebuttonselected"/>
-                                <connections>
-                                    <action selector="mineButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gqy-jQ-oA5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3NQ-8B-prP">
-                                <rect key="frame" x="309" y="597" width="50" height="50"/>
-                                <state key="normal" image="zoomoutbutton"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFR-9x-tIO">
-                                <rect key="frame" x="89" y="597" width="50" height="50"/>
-                                <state key="normal" image="flagbutton"/>
-                                <connections>
-                                    <action selector="flagButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hPb-LT-w0C"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ZY-sB-u6v">
-                                <rect key="frame" x="235" y="597" width="50" height="50"/>
-                                <state key="normal" image="zoominbutton"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minesweeper iOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="556-Fp-xXM">
-                                <rect key="frame" x="16" y="34" width="233" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mines Left: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6RA-pQ-MXL">
-                                <rect key="frame" x="245" y="78" width="114" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vnv-hv-Xo1">
-                                <rect key="frame" x="16" y="78" width="75" height="30"/>
-                                <state key="normal" title="New Game"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.76078431372549016" green="0.76078431372549016" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>

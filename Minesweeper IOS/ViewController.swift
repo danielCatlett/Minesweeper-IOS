@@ -32,6 +32,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     {
         super.viewDidLoad()
         
+        reloadGame()
+    }
+
+    override func didReceiveMemoryWarning()
+    {
+        super.didReceiveMemoryWarning()
+    }
+    
+    func reloadGame()
+    {
         numRows = 8
         numCols = 8
         minesLeft = 10
@@ -49,6 +59,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         mineCounter.text = "Mines Left: 10"
         
+        mineButton.setImage(UIImage(named: "minebuttonselected"), for: UIControlState.normal)
+        flagButton.setImage(UIImage(named: "flagbutton"), for: UIControlState.normal)
+        questionButton.setImage(UIImage(named: "questionbutton"), for: UIControlState.normal)
+        
+        imageBoard.removeAll()
         for y in 0...(numCols - 1)
         {
             let newArray = [UIImage]()
@@ -58,11 +73,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 imageBoard[y].append(UIImage(named: "untouched43")!)
             }
         }
+        collectionView.reloadData()
     }
-
-    override func didReceiveMemoryWarning()
+    
+    @IBAction func newGameButtonPressed(_ sender: UIButton)
     {
-        super.didReceiveMemoryWarning()
+        reloadGame()
     }
     
     @IBAction func mineButtonPressed(_ sender: UIButton)
@@ -124,6 +140,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         //coordinates of the tile that was tapped
         let x = coordinate.0
         let y = coordinate.1
+        mineCounter.text = String(x) + " " + String(y)
         
         //if board is not yet set up, set it up
         if(!boardSetUp)
@@ -158,7 +175,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 
                 //add to minesLeft
                 minesLeft = minesLeft + 1
-                //--------------------------------------------------------------------------------update textbox
+                let newText = ("Mines Left: " + String(minesLeft))
+                mineCounter.text = newText
             }
         default:
             if(activeSelectionType == 2) //if the player is question marking tiles
@@ -182,7 +200,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             
             //decrease minesLeft
             minesLeft = minesLeft - 1
-            //--------------------------------------------------------------------------------update textbox
+            let newText = ("Mines Left: " + String(minesLeft))
+            mineCounter.text = newText
         default: //if the player is question marking tiles
             theBoard.setState(x: x, y: y, state: 2) //question mark the tile
             updateImage(x: x, y: y)
@@ -221,9 +240,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func gameOver()
     {
-        for y in 0...numRows
+        for y in 0...(numRows - 1)
         {
-            for x in 0...numCols
+            for x in 0...(numCols - 1)
             {
                 if(theBoard.checkIfMine(x: x, y: y))
                 {
