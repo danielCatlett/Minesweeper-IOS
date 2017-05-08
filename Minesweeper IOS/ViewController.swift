@@ -178,7 +178,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 mineCounter.text = newText
             }
         default:
-            if(activeSelectionType == 2) //if the player is question marking tiles
+            if(activeSelectionType == 2 && currentState == 2) //if the player is question marking tiles
             {
                 //restore tile to untouched
                 theBoard.setState(x: x, y: y, state: 0)
@@ -288,7 +288,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         case 1:
             imageBoard[y][x] = UIImage(named: "flagged43")!
             collectionView.reloadData()
-        case 1:
+        case 2:
             imageBoard[y][x] = UIImage(named: "question43")!
             collectionView.reloadData()
         default:
